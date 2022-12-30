@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.apiapp.dao.BookRepository;
@@ -20,6 +21,7 @@ public class BookService {
 		list.add(new Book(3, "MyBook 3", "ABC 3"));
 	}*/
 	
+	@Autowired
 	private BookRepository bookRepository;
 	
 	public List<Book> getAllBooks(){

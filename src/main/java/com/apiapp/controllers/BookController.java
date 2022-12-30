@@ -43,8 +43,9 @@ public class BookController {
 		Book b = null;
 		try {
 			b = this.bookServices.addBook(book);
-			return ResponseEntity.of(Optional.of(b));
+			return ResponseEntity.of(Optional.of(book));
 		} catch (Exception e) {
+			System.out.println(e);
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	}
